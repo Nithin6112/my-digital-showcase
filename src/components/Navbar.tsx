@@ -69,7 +69,7 @@ const Navbar = () => {
           </div>
 
           {/* Download CV Button */}
-          <a href="#contact" className="hidden md:flex items-center gap-2 btn-gradient">
+          <a href="#contact" className="hidden md:flex items-center gap-2 btn-gradient bg-accent">
             Download CV
             <Download className="w-4 h-4" />
           </a>
