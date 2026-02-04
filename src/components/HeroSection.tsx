@@ -102,7 +102,7 @@ const HeroSection = () => {
 
           {/* Hero Content */}
           <div className="order-2 lg:order-2 text-center lg:text-left">
-            <p className="text-muted-foreground text-lg mb-2 italic">Hello, I'm</p>
+            <p className="mb-2 italic text-cyan-50 text-xl font-serif">Hello, I'm</p>
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-4 text-foreground">
               Nithin S
             </h1>
