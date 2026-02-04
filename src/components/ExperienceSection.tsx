@@ -64,7 +64,7 @@ const ExperienceSection = () => {
 
           {/* Job Simulations Card */}
           <div className="experience-card bg-primary-foreground">
-            <h3 className="text-xl font-bold text-center mb-4 lg:text-3xl text-cyan-50">Job Simulations</h3>
+            <h3 className="text-xl font-bold text-center mb-4 lg:text-3xl text-primary">Job Simulations</h3>
             <p className="text-base lg:text-lg text-center text-cyan-50">
               Completed a job simulation at Forage, gaining hands-on experience in real-world Data Analytics and cybersecurity scenarios. Developed skills in Exploratory Data Analysis (EDA), Machine Learning (ML), threat detection, vulnerability assessment, and network security through tasks designed by industry experts. Enhanced problem-solving abilities and applied theoretical knowledge to practical challenges. This experience demonstrated readiness for professional roles in cybersecurity.
               <a href="YOUR_GOOGLE_DRIVE_LINK_JOB_SIMULATION" target="_blank" rel="noopener noreferrer" className="inline-flex items-center ml-2 text-primary hover:text-primary/80 transition-colors">
@@ -75,7 +75,7 @@ const ExperienceSection = () => {
 
           {/* Certifications Card */}
           <div className="experience-card bg-primary-foreground">
-            <h3 className="text-xl font-bold text-center mb-6 text-primary lg:text-3xl">Certifications</h3>
+            <h3 className="text-xl font-bold text-center mb-6 lg:text-3xl text-primary">Certifications</h3>
             <div className="grid sm:grid-cols-2 gap-4">
               {certifications.map((cert, index) => <a key={index} href={cert.driveLink} target="_blank" rel="noopener noreferrer" className="flex items-start gap-3 p-3 rounded-lg hover:bg-primary/5 transition-colors group">
                   <Award className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
@@ -83,7 +83,7 @@ const ExperienceSection = () => {
                     <p className="text-sm transition-colors text-primary lg:text-lg">
                       {cert.name}
                     </p>
-                    <p className="text-xs text-cyan-50 lg:text-base">{cert.date}</p>
+                    <p className="text-xs lg:text-base text-cyan-50">{cert.date}</p>
                   </div>
                   <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors flex-shrink-0" />
                 </a>)}
@@ -91,10 +91,10 @@ const ExperienceSection = () => {
           </div>
 
           {/* Publication Card */}
-          <div className="experience-card border-l-4 border-primary bg-primary-foreground">
+          <div className="experience-card border-l-4 bg-primary-foreground border-cyan-50">
             <div className="flex items-center justify-center gap-3 mb-4">
               <FileText className="w-6 h-6 text-primary" />
-              <h3 className="text-xl font-bold text-primary lg:text-3xl">Publication</h3>
+              <h3 className="text-xl font-bold lg:text-3xl text-primary">Publication</h3>
             </div>
             <p className="text-base lg:text-lg text-center text-cyan-50">
               Article published in IJRPR journal on Windmill Power Prediction project during April 2024.
@@ -108,16 +108,16 @@ const ExperienceSection = () => {
           <div className="experience-card bg-primary-foreground">
             <div className="flex items-center justify-center gap-3 mb-6">
               <Lightbulb className="w-6 h-6 text-primary" />
-              <h3 className="text-xl font-bold text-primary lg:text-3xl">Extracurricular Activities</h3>
+              <h3 className="text-xl font-bold lg:text-3xl text-primary">Extracurricular Activities</h3>
             </div>
             <div className="space-y-4">
               {activities.map((activity, index) => <a key={index} href={activity.driveLink} target="_blank" rel="noopener noreferrer" className="flex items-start gap-3 p-3 rounded-lg hover:bg-primary/5 transition-colors group">
                   <span className="mt-1 text-cyan-50">•</span>
                   <div className="flex-1">
-                    <p className="text-sm transition-colors text-cyan-50 lg:text-lg">
+                    <p className="text-sm transition-colors lg:text-lg text-cyan-50">
                       {activity.name}
                     </p>
-                    <p className="text-xs text-cyan-50 lg:text-base">{activity.date}</p>
+                    <p className="text-xs lg:text-base text-cyan-50">{activity.date}</p>
                   </div>
                   <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors flex-shrink-0" />
                 </a>)}
