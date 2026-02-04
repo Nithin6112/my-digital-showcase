@@ -65,7 +65,7 @@ const EducationSection = () => {
               </div>
 
               {/* Period */}
-              <p className="text-xs text-center mb-6 text-cyan-50 lg:text-base">
+              <p className="text-xs text-center mb-6 lg:text-base text-slate-300">
                 {edu.period}
               </p>
 

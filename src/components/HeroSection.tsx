@@ -109,7 +109,7 @@ const HeroSection = () => {
             <p className="text-2xl md:text-3xl mb-6">
               And I'm a <span className="text-primary typing-cursor">{typedText}</span>
             </p>
-            <p className="mb-8 max-w-xl mx-auto lg:mx-0 italic text-xl text-cyan-50 text-justify">
+            <p className="mb-8 max-w-xl mx-auto lg:mx-0 italic text-xl text-justify text-cyan-100">
               I seek an opportunity to maximize my potential and contribute meaningfully to organizations. I am eager to take on challenging roles where I can develop innovative solutions for real-world scenarios.
             </p>
 

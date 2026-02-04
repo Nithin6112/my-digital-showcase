@@ -79,7 +79,7 @@ const SkillsSection = () => {
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             My <span className="text-gradient-cyan">Skills</span>
           </h2>
-          <p className="text-muted-foreground text-lg">
+          <p className="text-lg text-cyan-50">
             Technical expertise developed through education, internships, and personal projects
           </p>
         </div>
@@ -115,7 +115,7 @@ const SkillsSection = () => {
                 <div className="tech-badge">
                   <img src={tech.icon} alt={tech.name} className="w-8 h-8 object-contain" />
                 </div>
-                <span className="text-muted-foreground text-sm">{tech.name}</span>
+                <span className="text-sm text-cyan-50">{tech.name}</span>
               </div>)}
           </div>
         </div>
