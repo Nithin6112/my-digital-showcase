@@ -85,15 +85,23 @@
 
   html {
     scroll-behavior: smooth;
+    font-size: 18px; /* Increased base font size */
   }
 
   body {
     @apply bg-background text-foreground;
     font-family: 'Times New Roman', Times, serif;
+    font-size: 1rem;
+    line-height: 1.6;
   }
 
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Times New Roman', Times, serif;
+  }
+
+  p {
+    font-size: 1rem;
+    line-height: 1.7;
   }
 }
 
@@ -266,6 +274,51 @@
     border-color: hsl(var(--cyan-glow) / 0.5);
     box-shadow: 0 0 20px hsl(var(--cyan-glow) / 0.3);
     transform: scale(1.1);
+  }
+
+  /* Education card */
+  .education-card {
+    @apply p-8 rounded-2xl text-center transition-all duration-300;
+    background: hsl(220 25% 15%);
+    border: 1px solid hsl(var(--border));
+  }
+
+  .education-card:hover {
+    border-color: hsl(var(--primary) / 0.5);
+    box-shadow: 0 0 25px hsl(var(--cyan-glow) / 0.2);
+    transform: translateY(-5px);
+  }
+
+  /* Know more button */
+  .know-more-btn {
+    @apply w-full py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center;
+    background: linear-gradient(135deg, hsl(35 100% 50%), hsl(35 100% 40%));
+    color: hsl(var(--primary-foreground));
+  }
+
+  .know-more-btn:hover {
+    box-shadow: 0 0 20px hsl(35 100% 50% / 0.4);
+    transform: translateY(-2px);
+  }
+
+  /* Experience card */
+  .experience-card {
+    @apply p-6 lg:p-8 rounded-xl transition-all duration-300;
+    background: hsl(220 10% 75%);
+    border: 1px solid hsl(var(--border));
+  }
+
+  .experience-card p,
+  .experience-card span {
+    color: hsl(220 25% 20%);
+  }
+
+  .experience-card h3 {
+    color: hsl(35 100% 45%);
+  }
+
+  .experience-card:hover {
+    box-shadow: 0 0 25px hsl(var(--cyan-glow) / 0.15);
   }
 }
 
