@@ -45,16 +45,16 @@ const ExperienceSection = () => {
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 underline decoration-2 underline-offset-8">
             Experience & <span className="text-primary">Certifications</span>
           </h2>
-          <p className="text-muted-foreground text-lg lg:text-xl max-w-4xl mx-auto mt-6">
+          <p className="text-lg lg:text-xl max-w-4xl mx-auto mt-6 text-cyan-50">
             I bring hands-on experience through internships, projects, and job simulations, where I've worked with big data, machine learning, and real-world problem-solving. Alongside my practical experience, I've earned certifications in Java, Ethical Hacking, Blockchain, and Cybersecurity, which showcase my ability to adapt to diverse technologies and continuously expand my skill set.
           </p>
         </div>
 
         <div className="space-y-8 max-w-5xl mx-auto">
           {/* Internship Card */}
-          <div className="experience-card">
+          <div className="experience-card bg-primary-foreground">
             <h3 className="text-xl lg:text-2xl font-bold text-center mb-4 text-cyan-300">Internship</h3>
-            <p className="text-muted-foreground text-base lg:text-lg text-center">
+            <p className="text-base lg:text-lg text-center text-cyan-50">
               "The internship was conducted at Jawaharlal Nehru New College of Engineering, Shivamogga, under the JNNCE EI LEARN Platform, in collaboration with Ekathva Innovations Pvt. Ltd., focusing on big data analysis and machine learning."
               <a href="YOUR_GOOGLE_DRIVE_LINK_INTERNSHIP" target="_blank" rel="noopener noreferrer" className="inline-flex items-center ml-2 text-primary hover:text-primary/80 transition-colors">
                 <ExternalLink className="w-4 h-4" />
@@ -63,9 +63,9 @@ const ExperienceSection = () => {
           </div>
 
           {/* Job Simulations Card */}
-          <div className="experience-card">
-            <h3 className="text-xl lg:text-2xl font-bold text-primary text-center mb-4">Job Simulations</h3>
-            <p className="text-muted-foreground text-base lg:text-lg text-center">
+          <div className="experience-card bg-primary-foreground">
+            <h3 className="text-xl lg:text-2xl font-bold text-center mb-4 text-[#26cced]">Job Simulations</h3>
+            <p className="text-base lg:text-lg text-center text-cyan-50">
               Completed a job simulation at Forage, gaining hands-on experience in real-world Data Analytics and cybersecurity scenarios. Developed skills in Exploratory Data Analysis (EDA), Machine Learning (ML), threat detection, vulnerability assessment, and network security through tasks designed by industry experts. Enhanced problem-solving abilities and applied theoretical knowledge to practical challenges. This experience demonstrated readiness for professional roles in cybersecurity.
               <a href="YOUR_GOOGLE_DRIVE_LINK_JOB_SIMULATION" target="_blank" rel="noopener noreferrer" className="inline-flex items-center ml-2 text-primary hover:text-primary/80 transition-colors">
                 <ExternalLink className="w-4 h-4" />
@@ -74,8 +74,8 @@ const ExperienceSection = () => {
           </div>
 
           {/* Certifications Card */}
-          <div className="experience-card">
-            <h3 className="text-xl lg:text-2xl font-bold text-primary text-center mb-6">Certifications</h3>
+          <div className="experience-card bg-primary-foreground">
+            <h3 className="text-xl lg:text-2xl font-bold text-center mb-6 text-cyan-400">Certifications</h3>
             <div className="grid sm:grid-cols-2 gap-4">
               {certifications.map((cert, index) => <a key={index} href={cert.driveLink} target="_blank" rel="noopener noreferrer" className="flex items-start gap-3 p-3 rounded-lg hover:bg-primary/5 transition-colors group">
                   <Award className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
@@ -83,7 +83,7 @@ const ExperienceSection = () => {
                     <p className="text-foreground text-sm lg:text-base group-hover:text-primary transition-colors">
                       {cert.name}
                     </p>
-                    <p className="text-muted-foreground text-xs lg:text-sm">{cert.date}</p>
+                    <p className="text-xs lg:text-sm text-cyan-50">{cert.date}</p>
                   </div>
                   <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors flex-shrink-0" />
                 </a>)}
@@ -91,7 +91,7 @@ const ExperienceSection = () => {
           </div>
 
           {/* Publication Card */}
-          <div className="experience-card border-l-4 border-primary">
+          <div className="experience-card border-l-4 border-primary bg-primary-foreground">
             <div className="flex items-center justify-center gap-3 mb-4">
               <FileText className="w-6 h-6 text-primary" />
               <h3 className="text-xl lg:text-2xl font-bold text-primary">Publication</h3>
@@ -105,7 +105,7 @@ const ExperienceSection = () => {
           </div>
 
           {/* Extracurricular Activities Card */}
-          <div className="experience-card">
+          <div className="experience-card bg-primary-foreground">
             <div className="flex items-center justify-center gap-3 mb-6">
               <Lightbulb className="w-6 h-6 text-primary" />
               <h3 className="text-xl lg:text-2xl font-bold text-primary">Extracurricular Activities</h3>
