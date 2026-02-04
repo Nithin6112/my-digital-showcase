@@ -94,7 +94,7 @@ const ExperienceSection = () => {
           <div className="experience-card border-l-4 border-primary bg-primary-foreground">
             <div className="flex items-center justify-center gap-3 mb-4">
               <FileText className="w-6 h-6 text-primary" />
-              <h3 className="text-xl lg:text-2xl font-bold text-primary">Publication</h3>
+              <h3 className="text-xl font-bold text-primary lg:text-3xl">Publication</h3>
             </div>
             <p className="text-base lg:text-lg text-center text-cyan-50">
               Article published in IJRPR journal on Windmill Power Prediction project during April 2024.
@@ -108,7 +108,7 @@ const ExperienceSection = () => {
           <div className="experience-card bg-primary-foreground">
             <div className="flex items-center justify-center gap-3 mb-6">
               <Lightbulb className="w-6 h-6 text-primary" />
-              <h3 className="text-xl font-bold lg:text-xl text-primary">Extracurricular Activities</h3>
+              <h3 className="text-xl font-bold text-primary lg:text-3xl">Extracurricular Activities</h3>
             </div>
             <div className="space-y-4">
               {activities.map((activity, index) => <a key={index} href={activity.driveLink} target="_blank" rel="noopener noreferrer" className="flex items-start gap-3 p-3 rounded-lg hover:bg-primary/5 transition-colors group">
