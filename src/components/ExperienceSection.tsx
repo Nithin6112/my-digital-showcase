@@ -80,7 +80,7 @@ const ExperienceSection = () => {
               {certifications.map((cert, index) => <a key={index} href={cert.driveLink} target="_blank" rel="noopener noreferrer" className="flex items-start gap-3 p-3 rounded-lg hover:bg-primary/5 transition-colors group">
                   <Award className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
                   <div className="flex-1">
-                    <p className="text-foreground text-sm lg:text-base group-hover:text-primary transition-colors">
+                    <p className="text-sm lg:text-base transition-colors text-cyan-400">
                       {cert.name}
                     </p>
                     <p className="text-xs lg:text-sm text-cyan-50">{cert.date}</p>
@@ -94,9 +94,9 @@ const ExperienceSection = () => {
           <div className="experience-card border-l-4 border-primary bg-primary-foreground">
             <div className="flex items-center justify-center gap-3 mb-4">
               <FileText className="w-6 h-6 text-primary" />
-              <h3 className="text-xl lg:text-2xl font-bold text-primary">Publication</h3>
+              <h3 className="text-xl lg:text-2xl font-bold text-cyan-400">Publication</h3>
             </div>
-            <p className="text-muted-foreground text-base lg:text-lg text-center">
+            <p className="text-base lg:text-lg text-center text-cyan-50">
               Article published in IJRPR journal on Windmill Power Prediction project during April 2024.
               <a href="YOUR_GOOGLE_DRIVE_LINK_PUBLICATION" target="_blank" rel="noopener noreferrer" className="inline-flex items-center ml-2 text-primary hover:text-primary/80 transition-colors">
                 <ExternalLink className="w-4 h-4" />
@@ -108,16 +108,16 @@ const ExperienceSection = () => {
           <div className="experience-card bg-primary-foreground">
             <div className="flex items-center justify-center gap-3 mb-6">
               <Lightbulb className="w-6 h-6 text-primary" />
-              <h3 className="text-xl lg:text-2xl font-bold text-primary">Extracurricular Activities</h3>
+              <h3 className="text-xl lg:text-2xl font-bold text-cyan-400">Extracurricular Activities</h3>
             </div>
             <div className="space-y-4">
               {activities.map((activity, index) => <a key={index} href={activity.driveLink} target="_blank" rel="noopener noreferrer" className="flex items-start gap-3 p-3 rounded-lg hover:bg-primary/5 transition-colors group">
-                  <span className="text-primary mt-1">•</span>
+                  <span className="mt-1 text-cyan-50">•</span>
                   <div className="flex-1">
-                    <p className="text-foreground text-sm lg:text-base group-hover:text-primary transition-colors">
+                    <p className="text-sm lg:text-base transition-colors text-cyan-400">
                       {activity.name}
                     </p>
-                    <p className="text-muted-foreground text-xs lg:text-sm">{activity.date}</p>
+                    <p className="text-xs lg:text-sm text-cyan-50">{activity.date}</p>
                   </div>
                   <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors flex-shrink-0" />
                 </a>)}
