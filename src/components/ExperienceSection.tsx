@@ -53,7 +53,7 @@ const ExperienceSection = () => {
         <div className="space-y-8 max-w-5xl mx-auto">
           {/* Internship Card */}
           <div className="experience-card bg-primary-foreground">
-            <h3 className="text-xl lg:text-2xl font-bold text-center mb-4 text-cyan-300">Internship</h3>
+            <h3 className="text-xl lg:text-2xl font-bold text-center mb-4 text-primary">Internship</h3>
             <p className="text-base lg:text-lg text-center text-cyan-50">
               "The internship was conducted at Jawaharlal Nehru New College of Engineering, Shivamogga, under the JNNCE EI LEARN Platform, in collaboration with Ekathva Innovations Pvt. Ltd., focusing on big data analysis and machine learning."
               <a href="YOUR_GOOGLE_DRIVE_LINK_INTERNSHIP" target="_blank" rel="noopener noreferrer" className="inline-flex items-center ml-2 text-primary hover:text-primary/80 transition-colors">
@@ -64,7 +64,7 @@ const ExperienceSection = () => {
 
           {/* Job Simulations Card */}
           <div className="experience-card bg-primary-foreground">
-            <h3 className="text-xl lg:text-2xl font-bold text-center mb-4 text-[#26cced]">Job Simulations</h3>
+            <h3 className="text-xl lg:text-2xl font-bold text-center mb-4 text-primary">Job Simulations</h3>
             <p className="text-base lg:text-lg text-center text-cyan-50">
               Completed a job simulation at Forage, gaining hands-on experience in real-world Data Analytics and cybersecurity scenarios. Developed skills in Exploratory Data Analysis (EDA), Machine Learning (ML), threat detection, vulnerability assessment, and network security through tasks designed by industry experts. Enhanced problem-solving abilities and applied theoretical knowledge to practical challenges. This experience demonstrated readiness for professional roles in cybersecurity.
               <a href="YOUR_GOOGLE_DRIVE_LINK_JOB_SIMULATION" target="_blank" rel="noopener noreferrer" className="inline-flex items-center ml-2 text-primary hover:text-primary/80 transition-colors">
@@ -75,12 +75,12 @@ const ExperienceSection = () => {
 
           {/* Certifications Card */}
           <div className="experience-card bg-primary-foreground">
-            <h3 className="text-xl lg:text-2xl font-bold text-center mb-6 text-cyan-400">Certifications</h3>
+            <h3 className="text-xl lg:text-2xl font-bold text-center mb-6 text-primary">Certifications</h3>
             <div className="grid sm:grid-cols-2 gap-4">
               {certifications.map((cert, index) => <a key={index} href={cert.driveLink} target="_blank" rel="noopener noreferrer" className="flex items-start gap-3 p-3 rounded-lg hover:bg-primary/5 transition-colors group">
                   <Award className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
                   <div className="flex-1">
-                    <p className="text-sm lg:text-base transition-colors text-cyan-400">
+                    <p className="text-sm lg:text-base transition-colors text-primary">
                       {cert.name}
                     </p>
                     <p className="text-xs lg:text-sm text-cyan-50">{cert.date}</p>
