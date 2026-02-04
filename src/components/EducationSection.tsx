@@ -1,38 +1,31 @@
 import { BookOpen, Building, GraduationCap, ExternalLink } from 'lucide-react';
-
 const EducationSection = () => {
-  const educationData = [
-    {
-      icon: BookOpen,
-      title: 'SSLC',
-      institution: 'Sri Akkamahadevi English High School, Bhadravathi',
-      description: 'Completed SSLC with 80% score, building a strong academic foundation.',
-      score: '80%',
-      period: 'June 2017 - April 2018',
-      driveLink: 'YOUR_GOOGLE_DRIVE_LINK_SSLC', // Replace with actual link
-    },
-    {
-      icon: Building,
-      title: 'Pre University (PUC)',
-      institution: 'Sri Akkamahadevi Science PU College, Bhadravathi',
-      description: 'Completed Pre University Education in Science stream with 75% score.',
-      score: '75%',
-      period: 'July 2018 - March 2020',
-      driveLink: 'YOUR_GOOGLE_DRIVE_LINK_PUC', // Replace with actual link
-    },
-    {
-      icon: GraduationCap,
-      title: 'B.E. (ISE)',
-      institution: 'Jawaharlal Nehru National College of Engineering, Shivamogga',
-      description: 'Bachelor of Engineering in Information Science & Engineering with CGPA of 8.04.',
-      score: 'CGPA: 8.04',
-      period: 'Dec 2020 - June 2024',
-      driveLink: 'YOUR_GOOGLE_DRIVE_LINK_BE', // Replace with actual link
-    },
-  ];
-
-  return (
-    <section id="education" className="py-20">
+  const educationData = [{
+    icon: BookOpen,
+    title: 'SSLC',
+    institution: 'Sri Akkamahadevi English High School, Bhadravathi',
+    description: 'Completed SSLC with 80% score, building a strong academic foundation.',
+    score: '80%',
+    period: 'June 2017 - April 2018',
+    driveLink: 'YOUR_GOOGLE_DRIVE_LINK_SSLC' // Replace with actual link
+  }, {
+    icon: Building,
+    title: 'Pre University (PUC)',
+    institution: 'Sri Akkamahadevi Science PU College, Bhadravathi',
+    description: 'Completed Pre University Education in Science stream with 75% score.',
+    score: '75%',
+    period: 'July 2018 - March 2020',
+    driveLink: 'YOUR_GOOGLE_DRIVE_LINK_PUC' // Replace with actual link
+  }, {
+    icon: GraduationCap,
+    title: 'B.E. (ISE)',
+    institution: 'Jawaharlal Nehru National College of Engineering, Shivamogga',
+    description: 'Bachelor of Engineering in Information Science & Engineering with CGPA of 8.04.',
+    score: 'CGPA: 8.04',
+    period: 'Dec 2020 - June 2024',
+    driveLink: 'YOUR_GOOGLE_DRIVE_LINK_BE' // Replace with actual link
+  }];
+  return <section id="education" className="py-20">
       <div className="container mx-auto px-6">
         {/* Section Title */}
         <div className="text-center mb-16">
@@ -46,11 +39,7 @@ const EducationSection = () => {
 
         {/* Education Cards Grid */}
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {educationData.map((edu, index) => (
-            <div
-              key={index}
-              className="education-card group"
-            >
+          {educationData.map((edu, index) => <div key={index} className="education-card group">
               {/* Icon */}
               <div className="flex justify-center mb-6">
                 <div className="w-16 h-16 rounded-full bg-muted flex items-center justify-center group-hover:bg-primary/20 transition-all duration-300">
@@ -81,21 +70,13 @@ const EducationSection = () => {
               </p>
 
               {/* Know More Button */}
-              <a
-                href={edu.driveLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="know-more-btn"
-              >
+              <a href={edu.driveLink} target="_blank" rel="noopener noreferrer" className="know-more-btn bg-[#0bc4e5]">
                 Know More
                 <ExternalLink className="w-4 h-4 ml-2" />
               </a>
-            </div>
-          ))}
+            </div>)}
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default EducationSection;
