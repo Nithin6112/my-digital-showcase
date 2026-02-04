@@ -53,7 +53,7 @@ const EducationSection = () => {
               </h3>
 
               {/* Institution */}
-              <p className="text-muted-foreground text-sm lg:text-base text-center mb-3 px-2">
+              <p className="text-sm lg:text-base text-center mb-3 px-2 text-cyan-50">
                 {edu.institution}
               </p>
 
@@ -65,12 +65,12 @@ const EducationSection = () => {
               </div>
 
               {/* Period */}
-              <p className="text-muted-foreground text-xs lg:text-sm text-center mb-6">
+              <p className="text-xs text-center mb-6 text-cyan-50 lg:text-base">
                 {edu.period}
               </p>
 
               {/* Know More Button */}
-              <a href={edu.driveLink} target="_blank" rel="noopener noreferrer" className="know-more-btn text-base bg-cyan-400">
+              <a href={edu.driveLink} target="_blank" rel="noopener noreferrer" className="know-more-btn text-base rounded-sm bg-[#50cef1]">
                 Know More
                 <ExternalLink className="w-4 h-4 ml-2" />
               </a>
