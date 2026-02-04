@@ -80,10 +80,10 @@ const ExperienceSection = () => {
               {certifications.map((cert, index) => <a key={index} href={cert.driveLink} target="_blank" rel="noopener noreferrer" className="flex items-start gap-3 p-3 rounded-lg hover:bg-primary/5 transition-colors group">
                   <Award className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
                   <div className="flex-1">
-                    <p className="text-sm transition-colors text-primary lg:text-lg">
+                    <p className="text-sm transition-colors text-accent lg:text-xl">
                       {cert.name}
                     </p>
-                    <p className="text-xs lg:text-sm text-cyan-50">{cert.date}</p>
+                    <p className="text-xs text-cyan-50 lg:text-base">{cert.date}</p>
                   </div>
                   <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors flex-shrink-0" />
                 </a>)}
