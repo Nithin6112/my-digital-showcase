@@ -112,7 +112,7 @@ const SkillsSection = () => {
           <h3 className="text-2xl font-bold text-foreground mb-8">Other Technologies</h3>
           <div className="flex flex-wrap justify-center gap-8">
             {otherTechnologies.map(tech => <div key={tech.name} className="flex flex-col items-center gap-2">
-                <div className="tech-badge">
+                <div className="tech-badge border-cyan-50">
                   <img src={tech.icon} alt={tech.name} className="w-8 h-8 object-contain" />
                 </div>
                 <span className="text-sm text-cyan-50">{tech.name}</span>
