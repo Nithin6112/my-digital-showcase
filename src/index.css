@@ -304,17 +304,17 @@
   /* Experience card */
   .experience-card {
     @apply p-6 lg:p-8 rounded-xl transition-all duration-300;
-    background: hsl(220 10% 75%);
+    background: hsl(var(--card));
     border: 1px solid hsl(var(--border));
   }
 
   .experience-card p,
   .experience-card span {
-    color: hsl(220 25% 20%);
+    color: hsl(var(--foreground));
   }
 
   .experience-card h3 {
-    color: hsl(35 100% 45%);
+    color: hsl(var(--primary));
   }
 
   .experience-card:hover {

@@ -52,7 +52,7 @@ const ExperienceSection = () => {
 
         <div className="space-y-8 max-w-5xl mx-auto">
           {/* Internship Card */}
-          <div className="experience-card bg-primary-foreground">
+          <div className="experience-card bg-card">
             <h3 className="text-xl font-bold text-center mb-4 lg:text-3xl text-primary">Internship</h3>
             <p className="text-base text-center lg:text-lg text-cyan-50">
               "The internship was conducted at Jawaharlal Nehru New College of Engineering, Shivamogga, under the JNNCE EI LEARN Platform, in collaboration with Ekathva Innovations Pvt. Ltd., focusing on big data analysis and machine learning."
@@ -63,7 +63,7 @@ const ExperienceSection = () => {
           </div>
 
           {/* Job Simulations Card */}
-          <div className="experience-card bg-primary-foreground">
+          <div className="experience-card bg-card">
             <h3 className="text-xl font-bold text-center mb-4 lg:text-3xl text-primary">Job Simulations</h3>
             <p className="text-base lg:text-lg text-center text-cyan-50">
               Completed a job simulation at Forage, gaining hands-on experience in real-world Data Analytics and cybersecurity scenarios. Developed skills in Exploratory Data Analysis (EDA), Machine Learning (ML), threat detection, vulnerability assessment, and network security through tasks designed by industry experts. Enhanced problem-solving abilities and applied theoretical knowledge to practical challenges. This experience demonstrated readiness for professional roles in cybersecurity.
@@ -74,7 +74,7 @@ const ExperienceSection = () => {
           </div>
 
           {/* Certifications Card */}
-          <div className="experience-card bg-primary-foreground">
+          <div className="experience-card bg-card">
             <h3 className="text-xl font-bold text-center mb-6 lg:text-3xl text-primary">Certifications</h3>
             <div className="grid sm:grid-cols-2 gap-4">
               {certifications.map((cert, index) => <a key={index} href={cert.driveLink} target="_blank" rel="noopener noreferrer" className="flex items-start gap-3 p-3 rounded-lg hover:bg-primary/5 transition-colors group">
@@ -91,7 +91,7 @@ const ExperienceSection = () => {
           </div>
 
           {/* Publication Card */}
-          <div className="experience-card border-l-4 bg-primary-foreground border-cyan-50">
+          <div className="experience-card border-l-4 bg-card border-primary">
             <div className="flex items-center justify-center gap-3 mb-4">
               <FileText className="w-6 h-6 text-primary" />
               <h3 className="text-xl font-bold lg:text-3xl text-primary">Publication</h3>
@@ -105,7 +105,7 @@ const ExperienceSection = () => {
           </div>
 
           {/* Extracurricular Activities Card */}
-          <div className="experience-card bg-primary-foreground">
+          <div className="experience-card bg-card">
             <div className="flex items-center justify-center gap-3 mb-6">
               <Lightbulb className="w-6 h-6 text-primary" />
               <h3 className="text-xl font-bold lg:text-3xl text-primary">Extracurricular Activities</h3>
@@ -124,13 +124,6 @@ const ExperienceSection = () => {
             </div>
           </div>
 
-          {/* Download CV Button */}
-          <div className="text-center pt-8">
-            <a href="YOUR_GOOGLE_DRIVE_LINK_CV" target="_blank" rel="noopener noreferrer" className="btn-hero-primary inline-flex items-center gap-2">
-              Download CV
-              <ExternalLink className="w-4 h-4" />
-            </a>
-          </div>
         </div>
       </div>
     </section>;

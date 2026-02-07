@@ -54,6 +54,15 @@ const HeroSection = () => {
           {/* Profile Image with 3D Curved Frame */}
           <div className="relative flex justify-center lg:justify-start order-1 lg:order-1">
             <div className="relative animate-float">
+              {/* 3D surrounding particles/orbs */}
+              <div className="absolute -top-6 -left-6 w-4 h-4 rounded-full bg-primary/60 animate-pulse" />
+              <div className="absolute -top-3 right-4 w-3 h-3 rounded-full bg-primary/40 animate-pulse" style={{ animationDelay: '0.5s' }} />
+              <div className="absolute top-1/4 -right-8 w-5 h-5 rounded-full bg-primary/50 animate-pulse" style={{ animationDelay: '1s' }} />
+              <div className="absolute bottom-1/4 -left-10 w-3 h-3 rounded-full bg-primary/30 animate-pulse" style={{ animationDelay: '1.5s' }} />
+              <div className="absolute -bottom-4 right-8 w-4 h-4 rounded-full bg-primary/40 animate-pulse" style={{ animationDelay: '2s' }} />
+              <div className="absolute top-1/2 -left-6 w-2 h-2 rounded-full bg-primary/70 animate-pulse" style={{ animationDelay: '0.8s' }} />
+              <div className="absolute bottom-10 -right-6 w-3 h-3 rounded-full bg-primary/50 animate-pulse" style={{ animationDelay: '1.2s' }} />
+
               {/* Cyan glow background blob */}
               <div className="absolute inset-0 w-[350px] h-[450px] md:w-[400px] md:h-[500px]">
                 <svg viewBox="0 0 400 500" className="w-full h-full">
@@ -66,11 +75,17 @@ const HeroSection = () => {
                       </feMerge>
                     </filter>
                   </defs>
-                  {/* Cyan blob background */}
                   <path d="M200,50 C320,50 370,150 370,250 C370,380 300,450 200,450 C100,450 30,380 30,250 C30,150 80,50 200,50" fill="hsl(190, 100%, 50%)" className="animate-pulse-glow" />
                 </svg>
               </div>
               
+              {/* Rotating ring */}
+              <div className="absolute inset-0 w-[350px] h-[450px] md:w-[400px] md:h-[500px]">
+                <svg viewBox="0 0 400 500" className="w-full h-full animate-spin" style={{ animationDuration: '20s' }}>
+                  <ellipse cx="200" cy="250" rx="190" ry="240" fill="none" stroke="hsl(190, 100%, 50%)" strokeWidth="1" strokeDasharray="10 20" opacity="0.3" />
+                </svg>
+              </div>
+
               {/* Profile image container with curved D-shape */}
               <div className="relative w-[350px] h-[450px] md:w-[400px] md:h-[500px] overflow-hidden">
                 <svg viewBox="0 0 400 500" className="absolute inset-0 w-full h-full z-10">
@@ -84,12 +99,9 @@ const HeroSection = () => {
                       <stop offset="100%" stopColor="hsl(190, 100%, 50%)" />
                     </linearGradient>
                   </defs>
-                  
-                  {/* Outer curved border - white/cyan gradient */}
                   <path d="M180,35 C325,35 365,140 365,250 C365,395 295,465 180,465 C75,465 35,380 35,250 C35,140 65,35 180,35" fill="none" stroke="url(#borderGradient)" strokeWidth="3" filter="url(#glow)" />
                 </svg>
                 
-                {/* Actual image */}
                 <div className="absolute inset-0 z-0">
                   <img src={profileImage} alt="Nithin S" className="w-full h-full object-cover object-center" style={{
                   clipPath: 'path("M180,40 C320,40 360,140 360,250 C360,390 290,460 180,460 C80,460 40,380 40,250 C40,140 70,40 180,40")',
@@ -120,14 +132,20 @@ const HeroSection = () => {
                 </a>)}
             </div>
 
-            {/* CTA Buttons */}
-            <div className="flex flex-wrap justify-center lg:justify-start gap-4">
-              <a href="#contact" className="btn-hero-primary">
-                Hire Me
-              </a>
-              <a href="#contact" className="btn-hero-outline">
-                Contact Me
-              </a>
+            {/* Stats Bar */}
+            <div className="flex flex-wrap justify-center lg:justify-start gap-6 mt-4">
+              {[
+                { number: '1+', label: 'Years of experience' },
+                { number: '5+', label: 'Projects completed' },
+                { number: '10+', label: 'Technologies mastered' },
+                { number: '7+', label: 'Certifications earned' },
+              ].map((stat, i) => (
+                <div key={i} className="flex items-center gap-3">
+                  <span className="text-3xl font-bold text-primary">{stat.number}</span>
+                  <span className="text-sm text-muted-foreground leading-tight">{stat.label}</span>
+                  {i < 3 && <div className="hidden sm:block w-px h-10 bg-border ml-3" />}
+                </div>
+              ))}
             </div>
           </div>
         </div>
