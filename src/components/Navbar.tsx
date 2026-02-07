@@ -69,7 +69,7 @@ const Navbar = () => {
           </div>
 
           {/* Download CV Button */}
-          <a href="#contact" className="hidden md:flex items-center gap-2 btn-gradient bg-accent">
+          <a href="YOUR_GOOGLE_DRIVE_LINK_CV" target="_blank" rel="noopener noreferrer" className="hidden md:flex items-center gap-2 btn-gradient bg-accent">
             Download CV
             <Download className="w-4 h-4" />
           </a>
@@ -86,7 +86,7 @@ const Navbar = () => {
               {navLinks.map(link => <button key={link.id} onClick={() => scrollToSection(link.id)} className={`nav-link text-left ${activeSection === link.id ? 'active text-primary' : ''}`}>
                   {link.label}
                 </button>)}
-              <a href="#contact" className="flex items-center justify-center gap-2 btn-gradient mt-2">
+              <a href="YOUR_GOOGLE_DRIVE_LINK_CV" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 btn-gradient mt-2">
                 Download CV
                 <Download className="w-4 h-4" />
               </a>

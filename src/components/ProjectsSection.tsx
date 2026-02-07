@@ -57,30 +57,46 @@ const ProjectsSection = () => {
           </p>
         </div>
 
-        {/* Projects Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
-          {projects.map(project => <div key={project.id} className={`project-card cursor-pointer ${project.id === 1 || project.id === 5 ? 'lg:col-span-1' : ''}`} onMouseEnter={() => setHoveredProject(project.id)} onMouseLeave={() => setHoveredProject(null)}>
-              {/* Project Image */}
-              <div className="relative overflow-hidden aspect-[4/3]">
-                <img src={project.image} alt={project.title} className={`w-full h-full object-cover transition-all duration-500 ${hoveredProject === project.id ? 'scale-110 brightness-75' : 'scale-100'}`} />
-                
-                {/* Hover Overlay */}
-                <div className={`absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent flex flex-col justify-end p-4 transition-opacity duration-300 ${hoveredProject === project.id ? 'opacity-100' : 'opacity-0'}`}>
-                  <p className="text-muted-foreground text-sm mb-3">{project.description}</p>
-                  <div className="flex flex-wrap gap-2">
-                    {project.technologies.map(tech => <span key={tech} className="px-2 py-1 text-xs rounded bg-primary/20 text-primary">
-                        {tech}
-                      </span>)}
+        {/* Projects Grid - 3 top, 2 bottom centered */}
+        <div className="max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
+            {projects.slice(0, 3).map(project => (
+              <div key={project.id} className="project-card cursor-pointer" onMouseEnter={() => setHoveredProject(project.id)} onMouseLeave={() => setHoveredProject(null)}>
+                <div className="relative overflow-hidden aspect-[4/3]">
+                  <img src={project.image} alt={project.title} className={`w-full h-full object-cover transition-all duration-500 ${hoveredProject === project.id ? 'scale-110 brightness-75' : 'scale-100'}`} />
+                  <div className={`absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent flex flex-col justify-end p-4 transition-opacity duration-300 ${hoveredProject === project.id ? 'opacity-100' : 'opacity-0'}`}>
+                    <p className="text-muted-foreground text-sm mb-3">{project.description}</p>
+                    <div className="flex flex-wrap gap-2">
+                      {project.technologies.map(tech => <span key={tech} className="px-2 py-1 text-xs rounded bg-primary/20 text-primary">{tech}</span>)}
+                    </div>
                   </div>
                 </div>
+                <div className="p-4">
+                  <h3 className="text-foreground font-semibold">{project.title}</h3>
+                  <p className="text-muted-foreground text-sm">{project.date}</p>
+                </div>
               </div>
-
-              {/* Project Title */}
-              <div className="p-4">
-                <h3 className="text-foreground font-semibold">{project.title}</h3>
-                <p className="text-muted-foreground text-sm">{project.date}</p>
+            ))}
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            {projects.slice(3).map(project => (
+              <div key={project.id} className="project-card cursor-pointer" onMouseEnter={() => setHoveredProject(project.id)} onMouseLeave={() => setHoveredProject(null)}>
+                <div className="relative overflow-hidden aspect-[4/3]">
+                  <img src={project.image} alt={project.title} className={`w-full h-full object-cover transition-all duration-500 ${hoveredProject === project.id ? 'scale-110 brightness-75' : 'scale-100'}`} />
+                  <div className={`absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent flex flex-col justify-end p-4 transition-opacity duration-300 ${hoveredProject === project.id ? 'opacity-100' : 'opacity-0'}`}>
+                    <p className="text-muted-foreground text-sm mb-3">{project.description}</p>
+                    <div className="flex flex-wrap gap-2">
+                      {project.technologies.map(tech => <span key={tech} className="px-2 py-1 text-xs rounded bg-primary/20 text-primary">{tech}</span>)}
+                    </div>
+                  </div>
+                </div>
+                <div className="p-4">
+                  <h3 className="text-foreground font-semibold">{project.title}</h3>
+                  <p className="text-muted-foreground text-sm">{project.date}</p>
+                </div>
               </div>
-            </div>)}
+            ))}
+          </div>
         </div>
       </div>
     </section>;
