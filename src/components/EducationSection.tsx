@@ -32,14 +32,14 @@ const EducationSection = () => {
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
             My <span className="text-gradient-cyan">Education</span>
           </h2>
-          <p className="text-muted-foreground text-lg lg:text-xl max-w-3xl mx-auto">
+          <p className="text-lg lg:text-xl max-w-3xl mx-auto text-cyan-50">
             My academic journey that shaped my technical expertise and problem-solving skills
           </p>
         </div>
 
         {/* Education Cards Grid */}
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {educationData.map((edu, index) => <div key={index} className="education-card group">
+          {educationData.map((edu, index) => <div key={index} className="education-card group border-cyan-200">
               {/* Icon */}
               <div className="flex justify-center mb-6">
                 <div className="w-16 h-16 rounded-full bg-muted flex items-center justify-center group-hover:bg-primary/20 transition-all duration-300">

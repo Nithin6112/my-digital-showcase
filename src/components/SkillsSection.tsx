@@ -86,7 +86,7 @@ const SkillsSection = () => {
 
         {/* Main Skills Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto mb-16">
-          {mainSkills.map((skill, index) => <div key={skill.name} className="skill-card" style={{
+          {mainSkills.map((skill, index) => <div key={skill.name} className="skill-card border-cyan-200" style={{
           animationDelay: `${index * 0.1}s`
         }}>
               <div className="flex items-center gap-4 mb-4">

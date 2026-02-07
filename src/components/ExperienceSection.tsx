@@ -105,7 +105,7 @@ const ExperienceSection = () => {
           </div>
 
           {/* Extracurricular Activities Card */}
-          <div className="experience-card bg-card">
+          <div className="experience-card bg-card border-cyan-200">
             <div className="flex items-center justify-center gap-3 mb-6">
               <Lightbulb className="w-6 h-6 text-primary" />
               <h3 className="text-xl font-bold lg:text-3xl text-primary">Extracurricular Activities</h3>
