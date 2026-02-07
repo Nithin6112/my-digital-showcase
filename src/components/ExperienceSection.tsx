@@ -42,11 +42,11 @@ const ExperienceSection = () => {
       <div className="container mx-auto px-6">
         {/* Section Title */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 underline decoration-2 underline-offset-8 lg:text-3xl">
+         <h2 className="text-4xl md:text-5xl font-bold mb-4 underline decoration-2 underline-offset-8 lg:text-3xl">
             Experience & <span className="text-primary">Certifications</span>
           </h2>
           <p className="text-lg lg:text-xl max-w-4xl mx-auto mt-6 text-cyan-50 text-center">
-            I bring hands-on experience through internships, projects, and job simulations, where I've worked with big data, machine learning, and real-world problem-solving. Alongside my practical experience, I've earned certifications in Java, Ethical Hacking, Blockchain, and Cybersecurity, which showcase my ability to adapt to diverse technologies and continuously expand my skill set.
+            With expertise in Python, Java, Machine Learning, Data Science, and Cloud Computing, I bring hands-on experience through internships and job simulations in big data analysis, EDA, and cybersecurity. My certifications in Google Cloud Analytics, Oracle Cloud Infrastructure, Ethical Hacking, and Software Automation Testing reflect my commitment to mastering diverse technologies and delivering innovative, real-world solutions.
           </p>
         </div>
 

@@ -54,35 +54,47 @@ const HeroSection = () => {
           {/* Profile Image with 3D Curved Frame */}
           <div className="relative flex justify-center lg:justify-start order-1 lg:order-1">
             <div className="relative animate-float">
-              {/* 3D surrounding particles/orbs */}
-              <div className="absolute -top-6 -left-6 w-4 h-4 rounded-full bg-primary/60 animate-pulse" />
-              <div className="absolute -top-3 right-4 w-3 h-3 rounded-full bg-primary/40 animate-pulse" style={{ animationDelay: '0.5s' }} />
-              <div className="absolute top-1/4 -right-8 w-5 h-5 rounded-full bg-primary/50 animate-pulse" style={{ animationDelay: '1s' }} />
-              <div className="absolute bottom-1/4 -left-10 w-3 h-3 rounded-full bg-primary/30 animate-pulse" style={{ animationDelay: '1.5s' }} />
-              <div className="absolute -bottom-4 right-8 w-4 h-4 rounded-full bg-primary/40 animate-pulse" style={{ animationDelay: '2s' }} />
-              <div className="absolute top-1/2 -left-6 w-2 h-2 rounded-full bg-primary/70 animate-pulse" style={{ animationDelay: '0.8s' }} />
-              <div className="absolute bottom-10 -right-6 w-3 h-3 rounded-full bg-primary/50 animate-pulse" style={{ animationDelay: '1.2s' }} />
+              {/* Hexagonal tech nodes orbiting */}
+              <div className="absolute -top-8 left-1/4 w-6 h-6 border-2 border-primary/50 rotate-45 animate-pulse" style={{ animationDelay: '0s' }} />
+              <div className="absolute top-10 -right-10 w-5 h-5 border-2 border-primary/40 rounded-sm rotate-12 animate-pulse" style={{ animationDelay: '0.7s' }} />
+              <div className="absolute bottom-20 -left-12 w-4 h-4 border-2 border-primary/60 rotate-45 animate-pulse" style={{ animationDelay: '1.4s' }} />
+              <div className="absolute -bottom-6 right-1/4 w-5 h-5 border-2 border-primary/30 rounded-sm rotate-45 animate-pulse" style={{ animationDelay: '2.1s' }} />
+              
+              {/* Connecting circuit lines */}
+              <svg className="absolute inset-0 w-[350px] h-[450px] md:w-[400px] md:h-[500px] z-0" viewBox="0 0 400 500">
+                <defs>
+                  <filter id="glow">
+                    <feGaussianBlur stdDeviation="4" result="coloredBlur" />
+                    <feMerge>
+                      <feMergeNode in="coloredBlur" />
+                      <feMergeNode in="SourceGraphic" />
+                    </feMerge>
+                  </filter>
+                  <linearGradient id="lineGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stopColor="hsl(190, 100%, 50%)" stopOpacity="0" />
+                    <stop offset="50%" stopColor="hsl(190, 100%, 50%)" stopOpacity="0.6" />
+                    <stop offset="100%" stopColor="hsl(190, 100%, 50%)" stopOpacity="0" />
+                  </linearGradient>
+                </defs>
+                {/* Orbiting ellipses */}
+                <ellipse cx="200" cy="250" rx="195" ry="245" fill="none" stroke="hsl(190, 100%, 50%)" strokeWidth="0.5" strokeDasharray="4 8" opacity="0.2" className="animate-spin" style={{ transformOrigin: '200px 250px', animationDuration: '30s' }} />
+                <ellipse cx="200" cy="250" rx="185" ry="235" fill="none" stroke="hsl(190, 100%, 50%)" strokeWidth="0.5" strokeDasharray="6 12" opacity="0.15" className="animate-spin" style={{ transformOrigin: '200px 250px', animationDuration: '25s', animationDirection: 'reverse' }} />
+                {/* Glowing dots on orbit */}
+                <circle cx="200" cy="10" r="3" fill="hsl(190, 100%, 50%)" filter="url(#glow)" opacity="0.7">
+                  <animateTransform attributeName="transform" type="rotate" from="0 200 250" to="360 200 250" dur="15s" repeatCount="indefinite" />
+                </circle>
+                <circle cx="390" cy="250" r="2.5" fill="hsl(190, 100%, 60%)" filter="url(#glow)" opacity="0.5">
+                  <animateTransform attributeName="transform" type="rotate" from="180 200 250" to="540 200 250" dur="20s" repeatCount="indefinite" />
+                </circle>
+                <circle cx="10" cy="250" r="2" fill="hsl(190, 100%, 50%)" filter="url(#glow)" opacity="0.6">
+                  <animateTransform attributeName="transform" type="rotate" from="90 200 250" to="450 200 250" dur="18s" repeatCount="indefinite" />
+                </circle>
+              </svg>
 
-              {/* Cyan glow background blob */}
+              {/* Pulsating glow behind image */}
               <div className="absolute inset-0 w-[350px] h-[450px] md:w-[400px] md:h-[500px]">
                 <svg viewBox="0 0 400 500" className="w-full h-full">
-                  <defs>
-                    <filter id="glow">
-                      <feGaussianBlur stdDeviation="3" result="coloredBlur" />
-                      <feMerge>
-                        <feMergeNode in="coloredBlur" />
-                        <feMergeNode in="SourceGraphic" />
-                      </feMerge>
-                    </filter>
-                  </defs>
-                  <path d="M200,50 C320,50 370,150 370,250 C370,380 300,450 200,450 C100,450 30,380 30,250 C30,150 80,50 200,50" fill="hsl(190, 100%, 50%)" className="animate-pulse-glow" />
-                </svg>
-              </div>
-              
-              {/* Rotating ring */}
-              <div className="absolute inset-0 w-[350px] h-[450px] md:w-[400px] md:h-[500px]">
-                <svg viewBox="0 0 400 500" className="w-full h-full animate-spin" style={{ animationDuration: '20s' }}>
-                  <ellipse cx="200" cy="250" rx="190" ry="240" fill="none" stroke="hsl(190, 100%, 50%)" strokeWidth="1" strokeDasharray="10 20" opacity="0.3" />
+                  <path d="M200,50 C320,50 370,150 370,250 C370,380 300,450 200,450 C100,450 30,380 30,250 C30,150 80,50 200,50" fill="hsl(190, 100%, 50%)" opacity="0.15" filter="url(#glow)" className="animate-pulse-glow" />
                 </svg>
               </div>
 
@@ -132,20 +144,22 @@ const HeroSection = () => {
                 </a>)}
             </div>
 
-            {/* Stats Bar */}
-            <div className="flex flex-wrap justify-center lg:justify-start gap-6 mt-4">
-              {[
-                { number: '1+', label: 'Years of experience' },
-                { number: '5+', label: 'Projects completed' },
-                { number: '10+', label: 'Technologies mastered' },
-                { number: '7+', label: 'Certifications earned' },
-              ].map((stat, i) => (
-                <div key={i} className="flex items-center gap-3">
-                  <span className="text-3xl font-bold text-primary">{stat.number}</span>
-                  <span className="text-sm text-muted-foreground leading-tight">{stat.label}</span>
-                  {i < 3 && <div className="hidden sm:block w-px h-10 bg-border ml-3" />}
-                </div>
-              ))}
+            {/* Stats Bar - Horizontal layout matching reference */}
+            <div className="w-full mt-8">
+              <div className="flex justify-between items-center max-w-3xl mx-auto lg:mx-0 py-4 px-2">
+                {[
+                  { number: '1+', label: 'Years of\nexperience' },
+                  { number: '5+', label: 'Projects\ncompleted' },
+                  { number: '10+', label: 'Technologies\nmastered' },
+                  { number: '7+', label: 'Certifications\nearned' },
+                ].map((stat, i) => (
+                  <div key={i} className="flex items-center gap-3">
+                    <span className="text-3xl md:text-4xl font-bold text-primary">{stat.number}</span>
+                    <span className="text-xs md:text-sm text-muted-foreground leading-tight whitespace-pre-line">{stat.label}</span>
+                    {i < 3 && <div className="w-px h-12 bg-border/50 ml-4" />}
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
