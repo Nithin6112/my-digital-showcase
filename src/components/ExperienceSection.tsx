@@ -50,9 +50,9 @@ const ExperienceSection = () => {
           </p>
         </div>
 
-        <div className="space-y-8 max-w-5xl mx-auto">
+        <div className="space-y-8 max-w-5xl mx-auto border-cyan-200">
           {/* Internship Card */}
-          <div className="experience-card bg-card">
+          <div className="experience-card bg-card border-cyan-200">
             <h3 className="text-xl font-bold text-center mb-4 lg:text-5xl text-primary">Internship</h3>
             <p className="text-base text-center lg:text-lg text-cyan-50">
               "The internship was conducted at Jawaharlal Nehru New College of Engineering, Shivamogga, under the JNNCE EI LEARN Platform, in collaboration with Ekathva Innovations Pvt. Ltd., focusing on big data analysis and machine learning."
@@ -91,7 +91,7 @@ const ExperienceSection = () => {
           </div>
 
           {/* Publication Card */}
-          <div className="experience-card border-l-4 bg-card border-cyan-200 rounded-none">
+          <div className="experience-card border-l-4 bg-card border-cyan-200 pt-0 rounded-2xl opacity-100 shadow-none">
             <div className="flex items-center justify-center gap-3 mb-4">
               <FileText className="w-6 h-6 text-primary" />
               <h3 className="text-xl font-bold lg:text-3xl text-primary">Publication</h3>
