@@ -70,7 +70,7 @@ const EducationSection = () => {
               </p>
 
               {/* Know More Button */}
-              <a href={edu.driveLink} target="_blank" rel="noopener noreferrer" className="know-more-btn text-base rounded-sm text-primary-foreground bg-cyan-600 text-center">
+              <a href={edu.driveLink} target="_blank" rel="noopener noreferrer" className="know-more-btn text-base rounded-sm text-primary-foreground text-center">
                 Know More
                 <ExternalLink className="w-4 h-4 ml-2" />
               </a>
