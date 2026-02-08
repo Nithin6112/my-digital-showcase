@@ -63,7 +63,7 @@ const Navbar = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
-            {navLinks.map(link => <button key={link.id} onClick={() => scrollToSection(link.id)} className={`nav-link text-base ${activeSection === link.id ? 'active text-primary' : ''}`}>
+            {navLinks.map(link => <button key={link.id} onClick={() => scrollToSection(link.id)} className="text-lg">
                 {link.label}
               </button>)}
           </div>
