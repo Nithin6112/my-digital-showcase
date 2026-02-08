@@ -144,23 +144,23 @@ const HeroSection = () => {
                 </a>)}
             </div>
 
-            {/* Stats Bar - Horizontal layout matching reference */}
-            <div className="w-full mt-8">
-              <div className="flex justify-between items-center max-w-3xl mx-auto lg:mx-0 py-4 px-2">
-                {[
-                  { number: '1+', label: 'Years of\nexperience' },
-                  { number: '5+', label: 'Projects\ncompleted' },
-                  { number: '10+', label: 'Technologies\nmastered' },
-                  { number: '7+', label: 'Certifications\nearned' },
-                ].map((stat, i) => (
-                  <div key={i} className="flex items-center gap-3">
-                    <span className="text-3xl md:text-4xl font-bold text-primary">{stat.number}</span>
-                    <span className="text-xs md:text-sm text-muted-foreground leading-tight whitespace-pre-line">{stat.label}</span>
-                    {i < 3 && <div className="w-px h-12 bg-border/50 ml-4" />}
-                  </div>
-                ))}
+            {/* Stats Bar - Full width horizontal layout */}
+          </div>
+        </div>
+        <div className="w-full mt-12">
+          <div className="flex justify-between items-center max-w-5xl mx-auto py-6 px-4">
+            {[
+              { number: '1+', label: 'Years of\nexperience' },
+              { number: '5+', label: 'Projects\ncompleted' },
+              { number: '10+', label: 'Technologies\nmastered' },
+              { number: '7+', label: 'Certifications\nearned' },
+            ].map((stat, i) => (
+              <div key={i} className="flex items-center gap-4">
+                <span className="text-4xl md:text-5xl font-bold text-primary">{stat.number}</span>
+                <span className="text-sm md:text-base text-muted-foreground leading-tight whitespace-pre-line">{stat.label}</span>
+                {i < 3 && <div className="w-px h-14 bg-border/50 ml-6" />}
               </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>
