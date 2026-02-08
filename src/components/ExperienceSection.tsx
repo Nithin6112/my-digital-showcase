@@ -71,7 +71,7 @@ const ExperienceSection = () => {
               <Building2 className="w-6 h-6 text-primary" />
               <h3 className="text-xl font-bold lg:text-3xl text-primary">Job Simulations</h3>
             </div>
-            <p className="text-base lg:text-lg text-center text-cyan-50">
+            <p className="text-base lg:text-lg text-cyan-50 text-justify">
               Completed a job simulation at Forage, gaining hands-on experience in real-world Data Analytics and cybersecurity scenarios. Developed skills in Exploratory Data Analysis (EDA), Machine Learning (ML), threat detection, vulnerability assessment, and network security through tasks designed by industry experts. Enhanced problem-solving abilities and applied theoretical knowledge to practical challenges. This experience demonstrated readiness for professional roles in cybersecurity.
               <a href="YOUR_GOOGLE_DRIVE_LINK_JOB_SIMULATION" target="_blank" rel="noopener noreferrer" className="inline-flex items-center ml-2 text-primary hover:text-primary/80 transition-colors">
                 <ExternalLink className="w-4 h-4" />
