@@ -45,7 +45,7 @@ const ExperienceSection = () => {
          <h2 className="text-4xl md:text-5xl font-bold mb-4 lg:text-5xl">
             <span className="text-primary">About</span>
           </h2>
-          <p className="text-lg lg:text-xl max-w-4xl mx-auto mt-6 text-cyan-50 text-center">
+          <p className="text-lg lg:text-xl max-w-4xl mx-auto mt-6 text-cyan-50 text-justify">
             With expertise in Python, Java, Machine Learning, Data Science, and Cloud Computing, I bring hands-on experience through internships and job simulations in big data analysis, EDA, and cybersecurity. My certifications in Google Cloud Analytics, Oracle Cloud Infrastructure, Ethical Hacking, and Software Automation Testing reflect my commitment to mastering diverse technologies and delivering innovative, real-world solutions.
           </p>
         </div>
