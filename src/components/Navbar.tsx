@@ -29,7 +29,7 @@ const Navbar = () => {
     label: 'Home'
   }, {
     id: 'about',
-    label: 'Experience & Certifications'
+    label: 'About'
   }, {
     id: 'education',
     label: 'Education'
@@ -57,19 +57,19 @@ const Navbar = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <a href="#home" className="text-2xl font-bold">
-            <span className="text-gradient-pink text-primary">Port</span>
+            <span className="text-primary">Port</span>
             <span className="text-foreground">folio</span>
           </a>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
-            {navLinks.map(link => <button key={link.id} onClick={() => scrollToSection(link.id)} className={`nav-link ${activeSection === link.id ? 'active text-primary' : ''}`}>
+            {navLinks.map(link => <button key={link.id} onClick={() => scrollToSection(link.id)} className={`nav-link text-base ${activeSection === link.id ? 'active text-primary' : ''}`}>
                 {link.label}
               </button>)}
           </div>
 
           {/* Download CV Button */}
-          <a href="YOUR_GOOGLE_DRIVE_LINK_CV" target="_blank" rel="noopener noreferrer" className="hidden md:flex items-center gap-2 btn-gradient bg-accent">
+          <a href="YOUR_GOOGLE_DRIVE_LINK_CV" target="_blank" rel="noopener noreferrer" className="hidden md:flex items-center gap-2 px-6 py-2.5 rounded-lg font-semibold transition-all duration-300 bg-primary text-primary-foreground hover:shadow-[0_0_25px_hsl(190_100%_50%/0.5)] hover:-translate-y-0.5">
             Download CV
             <Download className="w-4 h-4" />
           </a>
