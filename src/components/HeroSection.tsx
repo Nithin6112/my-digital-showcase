@@ -55,10 +55,18 @@ const HeroSection = () => {
           <div className="relative flex justify-center lg:justify-start order-1 lg:order-1">
             <div className="relative animate-float">
               {/* Hexagonal tech nodes orbiting */}
-              <div className="absolute -top-8 left-1/4 w-6 h-6 border-2 border-primary/50 rotate-45 animate-pulse" style={{ animationDelay: '0s' }} />
-              <div className="absolute top-10 -right-10 w-5 h-5 border-2 border-primary/40 rounded-sm rotate-12 animate-pulse" style={{ animationDelay: '0.7s' }} />
-              <div className="absolute bottom-20 -left-12 w-4 h-4 border-2 border-primary/60 rotate-45 animate-pulse" style={{ animationDelay: '1.4s' }} />
-              <div className="absolute -bottom-6 right-1/4 w-5 h-5 border-2 border-primary/30 rounded-sm rotate-45 animate-pulse" style={{ animationDelay: '2.1s' }} />
+              <div className="absolute -top-8 left-1/4 w-6 h-6 border-2 border-primary/50 rotate-45 animate-pulse" style={{
+              animationDelay: '0s'
+            }} />
+              <div className="absolute top-10 -right-10 w-5 h-5 border-2 border-primary/40 rounded-sm rotate-12 animate-pulse" style={{
+              animationDelay: '0.7s'
+            }} />
+              <div className="absolute bottom-20 -left-12 w-4 h-4 border-2 border-primary/60 rotate-45 animate-pulse" style={{
+              animationDelay: '1.4s'
+            }} />
+              <div className="absolute -bottom-6 right-1/4 w-5 h-5 border-2 border-primary/30 rounded-sm rotate-45 animate-pulse" style={{
+              animationDelay: '2.1s'
+            }} />
               
               {/* Connecting circuit lines */}
               <svg className="absolute inset-0 w-[350px] h-[450px] md:w-[400px] md:h-[500px] z-0" viewBox="0 0 400 500">
@@ -77,8 +85,15 @@ const HeroSection = () => {
                   </linearGradient>
                 </defs>
                 {/* Orbiting ellipses */}
-                <ellipse cx="200" cy="250" rx="195" ry="245" fill="none" stroke="hsl(190, 100%, 50%)" strokeWidth="0.5" strokeDasharray="4 8" opacity="0.2" className="animate-spin" style={{ transformOrigin: '200px 250px', animationDuration: '30s' }} />
-                <ellipse cx="200" cy="250" rx="185" ry="235" fill="none" stroke="hsl(190, 100%, 50%)" strokeWidth="0.5" strokeDasharray="6 12" opacity="0.15" className="animate-spin" style={{ transformOrigin: '200px 250px', animationDuration: '25s', animationDirection: 'reverse' }} />
+                <ellipse cx="200" cy="250" rx="195" ry="245" fill="none" stroke="hsl(190, 100%, 50%)" strokeWidth="0.5" strokeDasharray="4 8" opacity="0.2" className="animate-spin" style={{
+                transformOrigin: '200px 250px',
+                animationDuration: '30s'
+              }} />
+                <ellipse cx="200" cy="250" rx="185" ry="235" fill="none" stroke="hsl(190, 100%, 50%)" strokeWidth="0.5" strokeDasharray="6 12" opacity="0.15" className="animate-spin" style={{
+                transformOrigin: '200px 250px',
+                animationDuration: '25s',
+                animationDirection: 'reverse'
+              }} />
                 {/* Glowing dots on orbit */}
                 <circle cx="200" cy="10" r="3" fill="hsl(190, 100%, 50%)" filter="url(#glow)" opacity="0.7">
                   <animateTransform attributeName="transform" type="rotate" from="0 200 250" to="360 200 250" dur="15s" repeatCount="indefinite" />
@@ -127,7 +142,7 @@ const HeroSection = () => {
           {/* Hero Content */}
           <div className="order-2 lg:order-2 text-center lg:text-left">
             <p className="mb-2 italic text-cyan-50 text-xl font-serif">Hello, I'm</p>
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-4 text-foreground">
+            <h1 className="text-5xl md:text-6xl font-bold mb-4 text-foreground lg:text-5xl">
               Nithin S
             </h1>
             <p className="text-2xl md:text-3xl mb-6">
@@ -149,18 +164,23 @@ const HeroSection = () => {
         </div>
         <div className="w-full mt-12">
           <div className="flex justify-between items-center max-w-5xl mx-auto py-6 px-4">
-            {[
-              { number: '1+', label: 'Years of\nexperience' },
-              { number: '5+', label: 'Projects\ncompleted' },
-              { number: '10+', label: 'Technologies\nmastered' },
-              { number: '7+', label: 'Certifications\nearned' },
-            ].map((stat, i) => (
-              <div key={i} className="flex items-center gap-4">
+            {[{
+            number: '1+',
+            label: 'Years of\nexperience'
+          }, {
+            number: '5+',
+            label: 'Projects\ncompleted'
+          }, {
+            number: '10+',
+            label: 'Technologies\nmastered'
+          }, {
+            number: '7+',
+            label: 'Certifications\nearned'
+          }].map((stat, i) => <div key={i} className="flex items-center gap-4">
                 <span className="text-4xl md:text-5xl font-bold text-primary">{stat.number}</span>
                 <span className="text-sm md:text-base text-muted-foreground leading-tight whitespace-pre-line">{stat.label}</span>
                 {i < 3 && <div className="w-px h-14 bg-border/50 ml-6" />}
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </div>
