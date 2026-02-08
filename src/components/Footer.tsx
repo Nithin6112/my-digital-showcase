@@ -13,7 +13,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           {/* Logo */}
           <a href="#home" className="text-xl font-bold">
-            <span className="text-gradient-pink">Port</span>
+            <span className="text-primary">Port</span>
             <span className="text-foreground">folio</span>
           </a>
 
